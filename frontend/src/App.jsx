@@ -1,11 +1,11 @@
-
+import Home from "../src/components/home"
 
 function App() {
   
 
   return (
     <>
-     Hello Wolrd
+     <Home/>
     </>
   )
 }
