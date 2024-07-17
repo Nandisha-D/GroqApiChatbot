@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-import "../stylesheets/home.css"
+import "../stylesheets/home2.css";
 
 function Home() {
   const [prompt, setPrompt] = useState("");
@@ -33,9 +33,7 @@ function Home() {
         {chatHistory.map((message, index) => (
           <div key={index} className="message">
             <div className="user-prompt">{message.prompt}</div>
-            <div
-              className="bot-response"
-              dangerouslySetInnerHTML={{ __html: message.response }}></div>
+            <div className="bot-response typewriter code" dangerouslySetInnerHTML={{ __html: message.response }}></div>
           </div>
         ))}
       </div>

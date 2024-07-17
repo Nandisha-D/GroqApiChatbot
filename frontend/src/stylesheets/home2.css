@@ -7,12 +7,13 @@ body {
   }
   
   .container {
+    height: 95vh;
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     padding: 20px;
-    background-color: #f0f0f0;
+    background-color: #494141;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin: 0 10%; /* Leave 10% space on left and right */
@@ -31,7 +32,7 @@ body {
   
   .user-prompt {
     background-color: #d3d3d3;
-    padding: 8px;
+    padding: 15px;
     border-radius: 8px;
     margin-bottom: 5px;
     max-width: 80%;
@@ -60,6 +61,7 @@ body {
     display: flex;
     align-items: center;
     margin-top: auto;
+    /* padding: 40px; */
     /* position: absolute;
     bottom: 5%;
     width: 80vw; */
@@ -67,16 +69,18 @@ body {
   
   .input-field {
     flex: 1;
-    padding: 10px;
+    padding: 20px;
     font-size: 16px;
     border: 1px solid #ccc;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
     border-radius: 4px;
     margin-right: 10px;
   }
   
   .button {
-    padding: 10px 20px;
-    background-color: #007bff;
+    padding:  20px;
+    background-color: #ff0015;
     color: white;
     border: none;
     border-radius: 4px;
@@ -85,5 +89,43 @@ body {
   }
   
   .button:hover {
-    background-color: #0056b3;
+    background-color: #50da1a;
   }
+  .typewriter {
+    overflow: hidden; /* Ensures the text is not shown outside the box */
+    border-right: .15em solid orange; /* Cursor effect */
+    white-space: nowrap; /* Keeps text on one line */
+    margin: 0 auto; /* Gives that typewriter effect */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite; /* Cursor effect */
+  }
+  
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange }
+  }
+
+  
+  .bot-response {
+    overflow: hidden; /* Ensures the text is not shown outside the box */
+    white-space: pre-wrap; /* Allows text to wrap to the next line */
+    animation: typing 5s steps(40, end);
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  

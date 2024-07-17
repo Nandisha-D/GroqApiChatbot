@@ -1,0 +1,29 @@
+version: '3.7'
+
+networks:
+  my-network:
+    driver: bridge   # Optional: Specify the network driver
+
+services:
+  frontend:
+    build: ./frontend
+    ports:
+      - "5173:5173"
+    environment:
+      - NODE_ENV=development
+    volumes:
+      - ./frontend:/app
+    command: npm run dev
+    depends_on:
+      - backend
+    networks:
+      - my-network
+
+  backend:
+    build: ./server
+    ports:
+      - "3000:3000"
+    env_file:
+      - ./server/.env
+    networks:
+      - my-network

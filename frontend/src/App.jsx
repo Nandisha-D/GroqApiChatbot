@@ -1,11 +1,15 @@
 import Home from "../src/components/home"
+import SideBar from "./components/sidebar"
 
 function App() {
   
 
   return (
     <>
-     <Home/>
+    <div className="componentCont">
+    {/* <SideBar/> */}
+    <Home/>
+    </div>
     </>
   )
 }
